@@ -156,7 +156,7 @@ let y = (x**2 + 6*x + 9)
 console.log(`The value of y is ${y}`) //3
 
 //Escreva um script que solicite ao usuário que insira horas e taxa por hora. Calcular o salário da pessoa?
-hours = prompt('Enter Hours')
+let hours = prompt('Enter Hours')
 let rate = prompt('Enter Rate por Hour')
 console.log(`Your weekly earning is ${hours*rate}`)
 
@@ -201,7 +201,7 @@ console.log(`${now.getDate()}/${(now.getMonth()+1)}/${now.getFullYear()}  ${now.
 // Crie um formato de hora legível por humanos usando o objeto Date time. A hora e os minutos devem ter dois dígitos (7 horas devem ser 07 e 5 minutos devem ser 05)
 // AAA-MM-DD HH:mm, por exemplo. 02-01-20120 07:05
 let minutes = now.getMinutes()
-let hours = now.getHours()
+hours = now.getHours()
 minutes <= 9 ? (minutes = '0' + minutes): minutes
 hours <= 9 ? (hours = '0' + hours): hours
 

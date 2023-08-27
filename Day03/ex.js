@@ -11,17 +11,19 @@ console.log(desafio)
 console.log(desafio.length)
 
 // Altere todos os caracteres da string para letras maiúsculas usando o método toUpperCase()
-console.log(desafio.toUpperCase())
+desafio4 = desafio.toUpperCase()
+console.log(desafio4)
 
-// Altere todos os caracteres da string para letras minúsculas usando o método toLowerCase() 
-console.log(desafio.toLowerCase())
+// Altere todos os caracteres da string para letras minúsculas usando o método toLowerCase()
+desafio5 = desafio.toLowerCase()
+console.log(desafio5)
 
 // Corte (corte) a primeira palavra da string usando o método substr() ou substring()
 let str = desafio.substring(3,7)
 console.log(str)
 
 // Divida a frase Days Of JavaScript de 30 Days Of JavaScript
-str = desafio.substring(2, desafio.length)
+let str2 = desafio.substring(2, desafio.length)
 console.log(str2)
 
 // Verifique se a string contém uma palavra Script usando o método include()

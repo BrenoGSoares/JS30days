@@ -1,162 +1,208 @@
 // EX 1
 
+// 1 - Declare a variável firstName, lastName, country, city, age, isMarried, year e atribua valor a ela e use o operador typeof para verificar diferentes tipos de dados.
+const firstName = 'Breno', lastName = 'Soares'
+let country = 'Brasil', city = 'Santo André', age = 21, isMarried ='AindaNão', year = 2023
+console.log(typeof firstName, typeof lastName, typeof country, typeof city, typeof age, typeof isMarried, typeof year)  
 
-//Declare uma variável chamada desafio e atribua a ela um valor inicial '30 Days Of JavaScript' .
-let desafio = '30 Days Of JavaScript'
+// 2 - Verifique se o tipo de '10' é igual a 10
+console.log('10' == 10)
+console.log('10' === 10)
 
-// Imprima a string no console do navegador usando console.log()
-console.log(desafio)
+// 3 - Verifique se parseInt('9.8') é igual a 10
+console.log(parseInt('9.8') == 10)
+console.log(parseInt('9.8') === 10)
 
-// Imprima o comprimento da string no console do navegador usando console.log()
-console.log(desafio.length)
+// 4 - O valor booleano é verdadeiro ou falso.
+// Escreva três declarações JavaScript que forneçam valor verdadeiro.
+console.log(1000 > 3)
+console.log(10 === 10)
+console.log(parseInt('10')>0)
 
-// Altere todos os caracteres da string para letras maiúsculas usando o método toUpperCase()
-desafio4 = desafio.toUpperCase()
-console.log(desafio4)
+// Escreva três instruções JavaScript que forneçam valor falso.
+console.log('Errado' === 'errado')
+console.log(1000 < 3)
+console.log(null == 0)
 
-// Altere todos os caracteres da string para letras minúsculas usando o método toLowerCase()
-desafio5 = desafio.toLowerCase()
-console.log(desafio5)
+// 5 - Descubra primeiro o resultado da seguinte expressão de comparação sem usar console.log(). Depois de decidir o resultado, confirme-o usando console.log()
 
-// Corte (corte) a primeira palavra da string usando o método substr() ou substring()
-let str = desafio.substring(3,7)
-console.log(str)
-
-// Divida a frase Days Of JavaScript de 30 Days Of JavaScript
-let str2 = desafio.substring(2, desafio.length)
-console.log(str2)
-
-// Verifique se a string contém uma palavra Script usando o método include()
-console.log(desafio.includes('Script'))
-
-// Divida a string em um array usando o método split()
-let newArray = desafio.split()
-console.log(newArray)
-
-// Divida a string 30 dias de JavaScript no espaço usando o método split()
-str = '30 Days Of at space'
-newArray = str.split(' ')
-console.log(newArray)
-
-// 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon' divide a string na vírgula e altera-a para um array.
-str = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
-newArray = str.split(', ')
-console.log(newArray)
-
-// Altere 30 dias de JavaScript para 30 dias de Python usando o método replace()
-str = '30 Days Of JavaScript'
-console.log(str.replace('JavaScript', 'Python'))
-
-// Qual é o caractere no índice 15 na string '30 Days Of JavaScript'? Use o método charAt() 
-console.log(str.charAt(15))
-
-// Qual é o código de caracteres de J na string '30 Days Of JavaScript' usando charCodeAt()
-console.log(str.charCodeAt(12))
-
-// Use indexOf para determinar a posição da primeira ocorrência de a em 30 dias de JavaScript
-console.log(str.indexOf('a'))
-
-// Use lastIndexOf para determinar a posição da última ocorrência de a em 30 dias de JavaScript
-console.log(str.lastIndexOf('a'))
-
-// Use indexOf para encontrar a posição da primeira ocorrência da palavra because na seguinte frase: 'You cannot end a sentence with because because because is a conjunction'
-let sentence = 'You cannot end a sentence with because because because is a conjunction'
-console.log(sentence.indexOf('because'))
-
-// Use lastIndexOf para encontrar a posição da última ocorrência da palavra because na seguinte frase: 'You cannot end a sentence with because because because is a conjunction'
-console.log(sentence.lastIndexOf('because'))
-
-// Use a pesquisa para encontrar a posição da primeira ocorrência da palavra because na seguinte frase: 'You cannot end a sentence with because because because is a conjunction'
-console.log(sentence.search('because'))
-
-// Use trim() para remover qualquer espaço em branco no início e no final de uma string. Por exemplo, ' 30 Days Of JavaScript '.
-str = '  30 Days Of JavaScript  '
-str = str.trim()
-console.log(str)
-
-// Use o métodostartWith() com a string 30 Days Of JavaScript e torne o resultado verdadeiro
-console.log(str.startsWith('30'))
-
-// Use o método endsWith() com a string 30 Days Of JavaScript e torne o resultado verdadeiro
-console.log(str.endsWith('f JavaScript'))
-
-// Use o método match() para encontrar todos os a em 30 dias de JavaScript
-console.log(str.match(/a/gi))
-
-// Use concat() e mescle '30 Days of' e 'JavaScript' em uma única string, '30 Days Of JavaScript'
-string1 = '30 Days of'
-console.log(string1.concat(' JavaScript'))
-
-// Use o método repeat() para imprimir 30 dias de JavaScript 2 vezes
-console.log(str.repeat(2))
-
-// EX 2
+// 4 > 3     #true *
+// 4 >= 3    #true *
+// 4 <3      #false *
+// 4 <= 3    #false *
+// 4 == 4    #true *
+// 4 === 4   #true *
+// 4! = 4    #false *
+// 4! == 4   #false *
+// 4! = '4'  #true (false)
+// 4 == '4'  #true *
+// 4 === '4' #false *
+console.log('***  5   ***')
+console.log(4 > 3)
+console.log(4 >= 3)
+console.log(4 <3)
+console.log(4 <= 3)
+console.log(4 == 4)
+console.log(4 === 4)
+console.log(4 != 4)
+console.log(4 !== 4)
+console.log(4 != '4')
+console.log(4 == '4')
+console.log(4 === '4')
+console.log('***  5   ***')
 
 
-// Usando console.log() imprima a seguinte instrução:
-console.log("The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.")
+// Encontre o comprimento do python e do jargão e faça uma declaração de comparação falsa. (?)
 
-//Usando console.log() imprima a seguinte citação de Madre Teresa:
-console.log("\"Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead.\"")
+// Descubra primeiro o resultado das seguintes expressões sem usar console.log(). Depois de decidir o resultado, confirme-o usando console.log()
 
-// Verifique se typeof '10' é exatamente igual a 10. Caso contrário, torne-o exatamente igual.
-console.log(typeof '10' == typeof 10)
-console.log(typeof +('10') == typeof 10)
+// 4 > 3 && 10 < 12  #true *
+// 4 > 3 && 10 > 12  #false *
+// 4 > 3 || 10 < 12  #true *
+// 4 > 3 || 10 > 12  #true *
+// !(4 > 3)          #false *
+// !(4 <3)           #true *
+// !(false)          #true  *      
+// !(4 > 3 && 10 < 12) #false *
+// !(4 > 3 && 10 > 12)  #true *
+// !(4 === '4')          #true *
+// Não há 'ligado' em dragão e python #true
 
-// Verifique se parseFloat('9.8') é igual a 10, caso contrário, torne-o exatamente igual a 10.
-console.log(parseFloat('9.8') == 10)
-console.log(Math.ceil(parseFloat('9.8')) == 10)
-
-// Verifique se 'on' é encontrado em python e jargão
-let word = 'python' , word2 = 'jargon'
-console.log(word.search('on'))
-console.log(word2.search('on'))
-
-// Espero que este curso não esteja cheio de jargões . Verifique se o jargão está na frase.
-str = 'I hope this course is not full of jargon'
-console.log(str.search('jargon'))
-
-// Gere um número aleatório entre 0 e 100 inclusive.
-console.log(Math.random()*101)
-
-// Gere um número aleatório entre 50 e 100 inclusive.
-console.log(Math.random()* 50 + 51)
-
-// Gere um número aleatório entre 0 e 255 inclusive.
-console.log(Math.random()* 256)
-
-// Acesse os caracteres da string 'JavaScript' usando um número aleatório.
-str = 'JavaScript'
-console.log(str[Math.floor(Math.random() * str.length)])
-
-// Use console.log() e caracteres de escape para imprimir o seguinte padrão.
-console.log("1 1 1 1 1\n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 64\n5 1 5 25 125")
-
-// Use substr para separar a frase because because because da seguinte frase: 'You cannot end a sentence with because because because is a conjunction'
-str = 'You cannot end a sentence with because because because is a conjunction'
-let firstI = str.indexOf('because')
-console.log(str.substr(firstI, 7*3+2))
+console.log('***  6  ***')
+console.log(4 > 3 && 10 < 12 ) 
+console.log(4 > 3 && 10 > 12 ) 
+console.log(4 > 3 || 10 < 12 ) 
+console.log(4 > 3 || 10 > 12 ) 
+console.log(!(4 > 3)) 
+console.log(!(4 <3)) 
+console.log(!(false))        
+console.log(!(4 > 3 && 10 < 12)) 
+console.log(!(4 > 3 && 10 > 12)) 
+console.log(!(4 === '4'))     
+console.log('***  6   ***')
 
 
-// EX 3
+
+// 7 - Use o objeto Date para realizar as seguintes atividades
+const now = new Date()
+// Qual é o ano hoje?
+console.log(now.getFullYear())
+// Qual é o mês hoje como um número?
+console.log(now.getMonth()+1)
+// Qual é a data hoje?
+console.log(`${now.getDate()}/${(now.getMonth()+1)}/${now.getFullYear()}`)
+// Qual é o dia de hoje como um número?
+console.log(now.getDate())
+// Qual é o horário agora?
+console.log(now.getHours())
+// Quais são os minutos agora?
+console.log(now.getMinutes())
+// Descubra o número de segundos decorridos desde 1º de janeiro de 1970 até agora.
+console.log((now.getTime())/1000)
 
 
-// 'Love is the best thing in this world. Some found their love and some are still looking for their love.' Conte o número de palavras love nesta frase.
-str = 'Love is the best thing in this world. Some found their love and some are still looking for their love.'
-newArray = str.match(/love/gi)
-console.log(newArray.length)
+// EX 02
 
-//Use match() para contar o número de todos because na seguinte frase:'You cannot end a sentence with because because because is a conjunction'
-str = 'You cannot end a sentence with because because because is a conjunction'
-newArray = str.match(/because/gi)
-console.log(newArray.length)
+// 1 - Escreva um script que solicite ao usuário que insira a base e a altura do triângulo e calcule a área de um triângulo (área = 0,5 xbxh).
+let b = prompt('base')
+let h = prompt('heigh')
+console.log(`The area of the triangle is ${(b*h)/2}`)
 
-// Limpe o texto a seguir e encontre a palavra mais frequente (dica, use substituição e expressões regulares).
-const paragraph = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;.\
- The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. \
- ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!?\
-  %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching'
+// 2 - Escreva um script que solicite ao usuário que insira o lado a, o lado b e o lado c do triângulo e calcule o perímetro do triângulo (perímetro = a + b + c)
+let a = +(prompt('a'))
+b = +(prompt('b'))
+let c = +(prompt('c'))
+console.log(`The perimeter of the triangle is ${a+b+c}`)
 
-let clean = paragraph.replace(/[@#$%&;]/g,'') 
-console.log(clean)
-console.log(clean.match(/teaching/gi)) 
+// Obtenha o comprimento e a largura usando o prompt e calcule uma área do retângulo (área = comprimento x largura e o perímetro do retângulo (perímetro = 2 x (comprimento + largura))
+let length = prompt('length:') 
+let width = prompt('width:')
+console.log(`The area of rectangle: ${width * length}`)
+console.log(`The perimeter of rectangle: ${2 * (width + length)}`)
+
+//Obtenha o raio usando o prompt e calcule a área de um círculo (área = pi xrxr) e a circunferência de um círculo (c = 2 x pi xr) onde pi = 3,14.
+let radius = prompt('radius: ')
+console.log(`The area of the circle is ${Math.PI * radius **2 }`)
+console.log(`The circumference of the circle is ${2 * Math.PI * radius}`)
+
+
+// Calcule a inclinação, interceptação x e interceptação y de y = 2x -2
+const coefa = 2
+const coefb = -2
+
+let interx =  2/2
+let intery =  2*0 -2
+console.log(`inclinação: ${coefa} interx: ${interx} intery: ${intery}`)
+
+// A inclinação é m = (y 2 -y 1 )/(x 2 -x 1 ). Encontre a inclinação entre o ponto (2, 2) e o ponto (6,10)
+// Coordenadas dos pontosl
+let x1 = 2;
+let y1 = 2;
+let x2 = 6;
+let y2 = 10;
+
+// Cálculo da inclinação
+let inclinacao = (y2 - y1) / (x2 - x1);
+
+console.log("A inclinação é: " + inclinacao);
+
+// Compare a inclinação das duas perguntas acima.
+console.log(coefa === inclinacao)
+
+// Calcule o valor de y (y = x 2 + 6x + 9). Tente usar diferentes valores de x e descubra qual valor de x y é 0.
+
+let x = prompt('Value of x: ')
+let y = (x**2 + 6*x + 9)
+console.log(`The value of y is ${y}`) //3
+
+//Escreva um script que solicite ao usuário que insira horas e taxa por hora. Calcular o salário da pessoa?
+let hours = prompt('Enter Hours')
+let rate = prompt('Enter Rate por Hour')
+console.log(`Your weekly earning is ${hours*rate}`)
+
+//Se o comprimento do seu nome for maior que 7, digamos, seu nome é longo, caso contrário, diga que seu nome é curto.
+let myName = 'Breno'
+myName.length > 7 ? console.log('Nome Longo'): console.log('Nome Curto')
+
+//Compare o comprimento do seu primeiro nome e o comprimento do seu nome de família e você deverá obter este resultado.
+firstName < lastName 
+  ? console.log(`My family name, ${lastName} is longer than my name, ${firstName}`)
+  : console.log(`My name, ${firstName} is longer than my family name, ${lastName} `)
+
+//Declare duas variáveis ​​myAge e yourAge e atribua a elas valores iniciais e myAge e yourAge.
+let myAge = 250
+let yourAge = 25
+myAge > yourAge
+  ? console.log(`I am ${myAge-yourAge} years older than you.`)
+  : console.log(`You are ${yourAge-myAge} years older than me. `)
+
+//Usando o prompt, obtenha o ano em que o usuário nasceu e, se o usuário tiver 18 anos ou mais, permita que o usuário dirija, caso contrário, diga ao usuário para esperar um determinado período de anos.
+const bornYear = prompt('Enter birth year: ')
+age = now.getFullYear() - bornYear
+age >= 18
+  ? console.log(`You are ${age}. You are old enough to drive`)
+  : console.log(`You are ${age}. You will be allowed to drive after ${Math.abs(age-18)} years`)
+
+//Escreva um script que solicite ao usuário que insira o número de anos. Calcule o número de segundos que uma pessoa pode viver. Suponha que alguém viva apenas cem anos  
+
+year = prompt('Enter number of years you live: ')
+console.log(`You lived ${year * 31557600} seconds`) 
+
+// Crie um formato de hora legível por humanos usando o objeto Data e hora
+// AAAA-MM-DD HH:mm
+// DD-MM-AAAA HH:mm
+// DD/MM/AAAA HH:mm
+
+console.log(`${now.getDate()}-${(now.getMonth()+1)}-${now.getFullYear()}  ${now.getHours()}:${now.getMinutes()}`)  
+console.log(`${now.getDate()}/${(now.getMonth()+1)}/${now.getFullYear()}  ${now.getHours()}:${now.getMinutes()}`)  
+
+// EX 03
+
+// Crie um formato de hora legível por humanos usando o objeto Date time. A hora e os minutos devem ter dois dígitos (7 horas devem ser 07 e 5 minutos devem ser 05)
+// AAA-MM-DD HH:mm, por exemplo. 02-01-20120 07:05
+let minutes = now.getMinutes()
+let hours = now.getHours()
+minutes <= 9 ? (minutes = '0' + minutes): minutes
+hours <= 9 ? (hours = '0' + hours): hours
+
+console.log(`${now.getFullYear()}-${(now.getMonth()+1)}-${now.getDate()}  ${hours}:${minutes}`)  

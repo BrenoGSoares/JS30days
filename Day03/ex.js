@@ -156,7 +156,7 @@ let y = (x**2 + 6*x + 9)
 console.log(`The value of y is ${y}`) //3
 
 //Escreva um script que solicite ao usuário que insira horas e taxa por hora. Calcular o salário da pessoa?
-let hours = prompt('Enter Hours')
+hours = prompt('Enter Hours')
 let rate = prompt('Enter Rate por Hour')
 console.log(`Your weekly earning is ${hours*rate}`)
 

@@ -4,21 +4,21 @@
 //Se o usuário tiver 18 anos ou mais, dê feedback: 'Você tem idade suficiente para dirigir',
 //mas se não tiver 18 anos, dê outro feedback informando que deve esperar o número de anos que ele precisa para completar 18 anos.
 
-// let yourAge = prompt('Enter your age: ');
-// if (yourAge >= 18) {
-//   console.log('You are old enough to drive.');
-// } else {
-//   console.log(`You are left with ${Math.abs(yourAge - 18)} years to drive.`);
-// }
+let yourAge = prompt('Enter your age: ');
+if (yourAge >= 18) {
+  console.log('You are old enough to drive.');
+} else {
+  console.log(`You are left with ${Math.abs(yourAge - 18)} years to drive.`);
+}
 
 // 2 - Compare os valores de myAge e yourAge usando if… else. Com base na comparação e registre o resultado no console informando quem é mais velho (eu ou você). Use prompt(“Digite sua idade:”) para obter a idade como entrada.
 
-// let myAge = prompt('My age is: ');
-// if (myAge > yourAge) {
-//   console.log(`I am ${myAge - yourAge} years older than you.`);
-// } else {
-//   console.log(`You are ${yourAge - myAge} years older than me.`);
-// }
+let myAge = prompt('My age is: ');
+if (myAge > yourAge) {
+  console.log(`I am ${myAge - yourAge} years older than you.`);
+} else {
+  console.log(`You are ${yourAge - myAge} years older than me.`);
+}
 
 // 3 - Se a for maior que b, retorne 'a é maior que b', caso contrário, 'a é menor que b'. Tente implementá-lo de maneiras
 
@@ -47,19 +47,19 @@ if (ehPar == 0) {
 // 02 EX
 
 // Escreva um código que possa dar notas aos alunos de acordo com suas pontuações:
-// let nota = prompt('Digite sua pontuação de 0-100: ');
 
-// if (nota > 79) {
-//   console.log('A');
-// } else if (nota > 69) {
-//   console.log('B');
-// } else if (nota > 59) {
-//   console.log('C');
-// } else if (nota > 49) {
-//   console.log('D');
-// } else {
-//   console.log('F');
-// }
+let nota = prompt('Digite sua pontuação de 0-100: ');
+if (nota > 79) {
+  console.log('A');
+} else if (nota > 69) {
+  console.log('B');
+} else if (nota > 59) {
+  console.log('C');
+} else if (nota > 49) {
+  console.log('D');
+} else {
+  console.log('F');
+}
 
 // Verifique se a estação é Outono, Inverno, Primavera ou Verão. Se a entrada do usuário for:
 
@@ -94,28 +94,81 @@ switch (mes) {
 
 // let dayOfWeek = prompt('Que dia é hoje?');
 
-// switch (dayOfWeek) {
-//   case 'segunda':
-//     console.log('Dia útil');
-//     break;
-//   case 'terça':
-//     console.log('Dia útil');
-//     break;
-//   case 'quarta':
-//     console.log('Dia útil');
-//     break;
-//   case 'quinta':
-//     console.log('Dia útil');
-//     break;
-//   case 'sexta':
-//     console.log('Dia útil');
-//     break;
-//   case 'sábado':
-//     console.log('Fim de semana');
-//     break;
-//   case 'domingo':
-//     console.log('Fim de semana');
-//     break;
-//   default:
-//     console.log('Inválido');
-// }
+switch (dayOfWeek) {
+  case 'segunda':
+    console.log('Dia útil');
+    break;
+  case 'terça':
+    console.log('Dia útil');
+    break;
+  case 'quarta':
+    console.log('Dia útil');
+    break;
+  case 'quinta':
+    console.log('Dia útil');
+    break;
+  case 'sexta':
+    console.log('Dia útil');
+    break;
+  case 'sábado':
+    console.log('Fim de semana');
+    break;
+  case 'domingo':
+    console.log('Fim de semana');
+    break;
+  default:
+    console.log('Inválido');
+}
+
+// EX 03
+
+// 1 - Escreva um programa que informe o número de dias de um mês.
+let mesDoAno = prompt('Digite o nome de um mês: ');
+
+switch (mesDoAno) {
+  case 'janeiro':
+  case 'março':
+  case 'maio':
+  case 'julho':
+  case 'agosto':
+  case 'outubro':
+  case 'dezembro':
+    console.log(`${mesDoAno} tem 31 dias`);
+    break;
+  case 'abril':
+  case 'junho':
+  case 'setembro':
+  case 'novembro':
+    console.log(`${mesDoAno} tem 30 dias`);
+    break;
+  case 'fevereiro':
+    console.log(`${mesDoAno} tem 28 dias`);
+    break;
+  default:
+    console.log('Inválido');
+}
+
+// 2 - Escreva um programa que informe o número de dias de um mês, agora considere o ano bissexto.
+
+switch (mesDoAno) {
+  case 'janeiro':
+  case 'março':
+  case 'maio':
+  case 'julho':
+  case 'agosto':
+  case 'outubro':
+  case 'dezembro':
+    console.log(`${mesDoAno} tem 31 dias`);
+    break;
+  case 'abril':
+  case 'junho':
+  case 'setembro':
+  case 'novembro':
+    console.log(`${mesDoAno} tem 30 dias`);
+    break;
+  case 'fevereiro':
+    console.log(`${mesDoAno} tem 29 dias`);
+    break;
+  default:
+    console.log('Inválido');
+}

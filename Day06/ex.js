@@ -313,3 +313,66 @@ for (i = 0; i < fullStack.length; i++) {
     console.log(fullStack[i][j]);
   }
 }
+
+// EX 03
+
+// Copy countries array(Avoid mutation)
+//Arrays are mutable. Create a copy of array which does not modify the original. Sort the copied array and store in a variable sortedCountries
+const paises = [];
+
+for (i = 0; i < countriesArq.length; i++) {
+  paises.push(countriesArq[i]);
+}
+let sortedCountries = paises.sort();
+console.log(paises);
+
+//Sort the webTechs array and mernStack array
+webTechs.sort();
+mernStack.sort();
+
+//Extract all the countries contain the word 'land' from the countries array and print it as array
+arr = [];
+for (i = 0; i < countriesArq.length; i++) {
+  let land = 'land';
+  if (countriesArq[i].indexOf(land) == -1) {
+    continue;
+  } else {
+    arr.push(countriesArq[i]);
+  }
+}
+console.log(arr);
+
+// Find the country containing the hightest number of characters in the countries array
+
+countryLenght = '';
+for (i = 0; i < countriesArq.length; i++) {
+  if (countriesArq[i].length > countryLenght.length) {
+    countryLenght = countriesArq[i];
+  }
+}
+console.log(countryLenght);
+
+// Extract all the countries containing only four characters from the countries array and print it as array
+countryLenght = [];
+for (i = 0; i < countriesArq.length; i++) {
+  if (countriesArq[i].length == 4) {
+    countryLenght.push(countriesArq[i]);
+  }
+}
+console.log(countryLenght);
+
+// Extract all the countries containing two or more words from the countries array and print it as array
+countryLenght = [];
+for (i = 0; i < countriesArq.length; i++) {
+  if (countriesArq[i].indexOf(' ') != -1) {
+    countryLenght.push(countriesArq[i]);
+  }
+}
+console.log(countryLenght);
+
+// Reverse the countries array and capitalize each country and stored it as an array
+countryLenght = [];
+for (i = countriesArq.length - 1; i >= 0; i--) {
+  countryLenght.push(countriesArq[i].toUpperCase());
+}
+console.log(countryLenght);

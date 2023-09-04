@@ -308,7 +308,7 @@ console.log(`Array antes: ${arr}`);
 sumOfOdds(10);
 console.log(` Array depois: ${arr}`);
 
-// Declare um nome de função sumOfEven . É necessário um parâmetro numérico e soma todos os números pares nesse intervalo.]
+// Declare um nome de função sumOfEven . É necessário um parâmetro numérico e soma todos os números pares nesse intervalo.
 arr = [];
 function sumOfEven(x) {
   for (i = 0; i <= x; i++) {
@@ -385,16 +385,16 @@ console.log(id);
 
 //Modifique a função userIdGenerator . Declare um nome de função userIdGeneratedByUser . Não aceita nenhum parâmetro, mas requer duas entradas usando prompt(). Uma das entradas é o número de caracteres e a segunda entrada é o número de ids que devem ser gerados.
 
-// function userIdGeneratedByUser() {
-//   let numberCarac = prompt();
-//   let numberIds = prompt();
-//   for (j = 0; j < numberIds; j++) {
-//     console.log(userIdGenerator(numberCarac));
-//   }
-//   return;
-// }
+function userIdGeneratedByUser() {
+  let numberCarac = prompt();
+  let numberIds = prompt();
+  for (j = 0; j < numberIds; j++) {
+    console.log(userIdGenerator(numberCarac));
+  }
+  return;
+}
 
-// userIdGeneratedByUser();
+userIdGeneratedByUser();
 
 //Escreva um nome de função rgbColorGenerator e ela gera cores RGB.
 
@@ -579,3 +579,6 @@ function randomNumber() {
 }
 
 randomNumber();
+
+//Escreva uma função chamada reverseCountries,
+// ela pega o array de países e primeiro copia o array e retorna o inverso do array original

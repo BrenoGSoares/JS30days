@@ -238,3 +238,37 @@ function startsLetterd() {
 }
 
 console.log(startsLetterd());
+
+// EX 03
+
+// Use as informações dos países, na pasta de dados. Classifique os países por nome, por capital, por população
+const classContryName = [...countries];
+const classifyCountries = classContryName.sort((a, b) => {
+  if (a.name > b.name) {
+    return 1;
+  } else {
+    return -1;
+  }
+});
+console.log(classifyCountries);
+
+const classContryCapital = [...countries];
+const classifyCapital = classContryCapital.sort((a, b) => {
+  if (a.capital > b.capital) {
+    return 1;
+  } else {
+    return -1;
+  }
+});
+console.log(classifyCapital);
+
+const classContryPop = [...countries];
+const classifyPop = classContryPop.sort((a, b) => {
+  if (a.population > b.population) {
+    return -1;
+  } else {
+    return 0;
+  }
+});
+
+console.log(classifyPop);

@@ -1,53 +1,130 @@
 // EX 01
-
-// Crie uma classe Animal. A classe terá propriedades de nome, idade, cor, pernas e criará diferentes métodos
-class animal {
-  constructor(type, name, age, color, legs) {
-    this.type = type;
-    this.name = name;
-    this.age = age;
-    this.color = color;
-    this.legs = legs;
-  }
-  getInfoAnimal() {
-    const info = 'O nome do animal é ' + this.name + ' e ele é um ' + this.type;
-    return info;
-  }
+const skills = ['HTML', 'CSS', 'JS', 'React', 'Node', 'Python'];
+let age = 250;
+let isMarried = true;
+const student = {
+  firstName: 'Asabeneh',
+  lastName: 'Yetayehe',
+  age: 250,
+  isMarried: true,
+  skills: ['HTML', 'CSS', 'JS', 'React', 'Node', 'Python'],
+};
+const txt = `{
+    "Alex": {
+        "email": "alex@alex.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 30
+    },
+    "Asab": {
+        "email": "asab@asab.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Redux",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node"
+        ],
+        "age": 25,
+        "isLoggedIn": false,
+        "points": 50
+    },
+    "Brook": {
+        "email": "daniel@daniel.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux"
+        ],
+        "age": 30,
+        "isLoggedIn": true,
+        "points": 50
+    },
+    "Daniel": {
+        "email": "daniel@alex.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Python"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    },
+    "John": {
+        "email": "john@john.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux",
+            "Node.js"
+        ],
+        "age": 20,
+        "isLoggedIn": true,
+        "points": 50
+    },
+    "Thomas": {
+        "email": "thomas@thomas.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    },
+    "Paul": {
+        "email": "paul@paul.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    }
 }
+`;
+// Altere a matriz de habilidades para JSON usando JSON.stringify()
+const jsonSkills = JSON.stringify(skills, undefined, 4);
+console.log(jsonSkills);
 
-// const dog = new animal('cachorro', 'fred', '10', 'Preto', 4);
-// console.log(dog);
-// console.log(dog.getInfoAnimal());
+// Stringify a variável idade
+const jsonAge = JSON.stringify(age, undefined, 4);
+console.log(jsonAge);
+// Stringifique a variável isMarried
+const jsonBoolean = JSON.stringify(isMarried, undefined, 4);
+console.log(jsonBoolean);
 
-// Crie uma classe filha Cachorro e Gato a partir da Classe Animal.
-
-// syntax
-class dog extends animal {}
-const doguinho = new dog('cachorro', 'fred', '10', 'Preto', 4);
-console.log(doguinho);
-console.log(doguinho.getInfoAnimal());
-
-class cat extends animal {}
-const catinho = new dog('gato', 'cristal', '10', 'branca', 4);
-console.log(catinho);
-console.log(catinho.getInfoAnimal());
+// Stringify o objeto do aluno
+const jsonStudent = JSON.stringify(student, undefined, 4);
+console.log(jsonStudent);
 
 // EX 02
-
-//Substitua o método que você cria na classe Animal
-class bird extends animal {
-  constructor(type, name, age, color, legs, gender) {
-    super(type, name, age, color, legs);
-    this.gender = gender;
-  }
-
-  getInfoAnimal() {
-    let sex = this.gender == 'Male' ? 'ele' : 'ela';
-    const info = `O nome do animal é ${this.name} e ${sex} é um ${this.type}`;
-    return info;
-  }
-}
-
-const birdzinho = new bird('Pássaro', 'Leleco', '5', 'Amarelo', 2, 'Male');
-console.log(birdzinho);
-console.log(birdzinho.getInfoAnimal());
+// Stringify o objeto de alunos apenas com as propriedades firstName, lastName e skills
+const jsonFilterStudent = JSON.stringify(
+  student,
+  ['firstName', 'lastName', 'skills'],
+  4
+);
+console.log(jsonFilterStudent);

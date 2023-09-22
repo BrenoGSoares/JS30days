@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript for Everyone:DOM</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>30DaysOfJavaScript Challenge</h2> 
+      <p id="p">Elemento 1</p>
+      <p id="p">Elemento 2</p>
+      <p id="p">Elemento 3</p>
+      <p id="p">Elemento 4</p>
+    </div>
+    <script>
+    // EX 1
+    const pTag = document.querySelector('p')
+    console.log(pTag)
+    let pTagQuerySelector = document.querySelector('#p')
+    console.log(`${pTagQuerySelector}`)
+    pTagQuerySelector = document.querySelectorAll('p')
+    pTagQuerySelector.forEach(element => {console.log(element)});
+    pTagQuerySelector[pTagQuerySelector.length -1 ].textContent = 'Quarto paragráfo'
+    for(let i = 0; i<pTagQuerySelector.length; i++){
+      pTagQuerySelector[i].classList.add('Elemento')
+      pTagQuerySelector[i].setAttribute('id', 'tagP')
+    }
+    // Ex 2
+    pTagQuerySelector = document.querySelectorAll('#tagP')
+    pTagQuerySelector.forEach((elemento, i) =>{
+      elemento.style.fontSize = '24px'
+      elemento.style.backgroundColor = 'black'
+      elemento.style.color = i % 2 === 0 ? 'green' : 'red';
+      elemento.textContent = 'Este é o paragrafo número ' + `${i+1}` 
+    })
+    </script>
+  </body>
+</html>

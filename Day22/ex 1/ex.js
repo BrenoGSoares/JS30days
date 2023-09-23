@@ -1,5 +1,4 @@
 const container = document.querySelector('.container')
-console.log(container)
 
 function primeNumber(num) {
   if (num == 0 || num == 1) {

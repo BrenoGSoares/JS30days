@@ -1,28 +1,38 @@
-const container = document.querySelector('.countries-container')
+const text = document.getElementById('text')
+text.style.cssText = `
+  display: inline-block; /*  torna o elemento de bloco com largura automática */
+  text-align: center;
+  min-width: 200px;
+  margin: 50px 0;
+  padding: 15px;
+  font-size: 24px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.125); 
+  border-radius: 3px;`
 
-for (let i = 0; i < countries.length; i++) {
-  const country = countries[i]
-  const name = document.createElement('h1')
-  name.textContent = country
-  name.style.cssText = `
+document.body.addEventListener('keypress', (e) => {
+  const code = document.getElementById('code')
+  const num = document.createElement('h2')
+  const key = document.createElement('h2')
+
+  num.style.cssText = `
     display: inline-block;
-    margin: 5px;
-    padding: 10px;
-    width: 150px;
-    height: 50px;
-    font-size: 20px;
-    font-weight: 100;
     text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.125); 
+    min-width: 200px;
+    padding: 15px;
+    font-size: 6rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.125);
     border-radius: 3px;
-    text-align: center; 
-    overflow: hidden;`
+    color: green; 
+    `
+  key.style.cssText = `
+  color:green;`
+  const verNum = document.querySelectorAll('h2')
+  verNum.forEach((e) => {
+    e.remove()
+  })
 
-  container.appendChild(name)
-
-  // Quebra de linha após cada grupo de 6 países
-  if ((i + 1) % 6 === 0) {
-    const lineBreak = document.createElement('br')
-    container.appendChild(lineBreak)
-  }
-}
+  num.textContent = e.keyCode
+  key.textContent = e.key
+  code.appendChild(num)
+  text.appendChild(key)
+})

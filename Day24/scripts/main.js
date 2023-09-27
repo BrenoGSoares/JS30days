@@ -12,6 +12,7 @@ const nomePlanet = [
   'Neptune',
   'Pluto',
 ]
+
 const g = [3.7, 8.87, 9.8, 1.6, 3.71, 24.79, 10.44, 8.87, 11.15, 0.62]
 const result = () => {
   const descr = document.getElementsByClassName('description')

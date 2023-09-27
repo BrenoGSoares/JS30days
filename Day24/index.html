@@ -13,20 +13,20 @@
         <div class="menu">
 
             <input type="text" id="mass" placeholder="Mass in Kilogram" />
-            <select>
+            <select id="option">
                 <option value='none'>--select planet-- </option>
-                <option value='mercury'>Mercury</option>
-                <option value='venus'>Venus</option>
-                <option value='earth'>Earth</option>
-                <option value='moon'>Moon</option>
-                <option value='mars'>Mars</option>
-                <option value='jupiter'>Jupiter</option>
-                <option value='saturn'>Saturn</option>
-                <option value='uranus'>Uranus</option>
-                <option value='neptune'>Neptune</option>
-                <option value='pluto'>Pluto</option>
+                <option value='0'>Mercury</option>
+                <option value='1'>Venus</option>
+                <option value='2'>Earth</option>
+                <option value='3'>Moon</option>
+                <option value='4'>Mars</option>
+                <option value='5'>Jupiter</option>
+                <option value='6'>Saturn</option>
+                <option value='7'>Uranus</option>
+                <option value='8'>Neptune</option>
+                <option value='9'>Pluto</option>
             </select>
-            <button>Calculate weight</button>
+            <button onclick="result()">Calculate weight</button>
         </div>
             
 	</header>
@@ -35,7 +35,12 @@
 			<div class="flex-item image">
 				<img src='./images/earth.png' class="planet-image" />
 			</div>
-			<div class="flex-item description"></div>
+			<div class="flex-item description">
+                <h2>The weight of the object on <span id="name"></span></h2>
+                <div class="decoration">
+                    <h1 id="result"></h1>
+                </div>
+            </div>
 
 		</div>
 

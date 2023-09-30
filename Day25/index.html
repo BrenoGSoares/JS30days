@@ -2,13 +2,39 @@
 <html lang="en">
 
 <head>
-	<title>Solar System: Document Object Model:30 Days Of JavaScript</title>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>World Countries Data</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+	<link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
+	<header id="countries">
+		<h2>World Countries Data</h2>
+		<p class="subtitle">Currently, we have 250 countires</p>
+		<p class="feedback"></p>
+	</header>
+	<main>
+
+		<div class="wrapper">
+			<div class="graph-buttons">
+				<div class="buttons">
+					<button class="population" onclick="show_pop()" value="0">Population</button>
+					<button class="languages" onclick="show_lang()" value="1">Languages</button>
+				</div>
+				<h4 class="graph-title"></h4>
+			</div>
+			<div class="graphs">
+				<div class="graph-wrapper" id="stat"></div>
+			</div>
+		</div>
+	</main>
+
+	<script src="./scripts/countries_data.js"></script>
 	<script src="./scripts/main.js"></script>
+
 </body>
 
 </html>

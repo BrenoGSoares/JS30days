@@ -23,7 +23,7 @@ const result = () => {
   console.log(imagem)
   const peso = parseFloat(mass.value) * g[parseInt(planet.value)]
   spanName.textContent = nomePlanet[parseInt(planet.value)].toUpperCase()
-  resultPeso.textContent = peso.toFixed(2)
+  resultPeso.textContent = peso.toFixed(2) + ' N'
   imagem[0].src =
     './images/' + nomePlanet[parseInt(planet.value)].toLowerCase() + '.png'
   console.log(imagem.src)

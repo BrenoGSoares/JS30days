@@ -1,0 +1,115 @@
+ * {
+    margin: 0;
+    padding: 0;
+ }
+
+ h1, h2{
+   font-family: Montserrat;
+   color: #FFF;
+   text-align: center;
+}
+
+#title{
+   text-transform: uppercase;
+   font-size: 3rem;
+   word-spacing: 0.5rem;
+   letter-spacing: 1rem;
+}
+
+h2{
+   font-weight: 500;
+}
+
+
+/****** MENU ******/
+
+ .flex-menu{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   background-image: url('../images/globe-2.jpg');
+   height: 70vh;
+   background-size: 100%;
+   background-position: center;
+ }
+
+ .flex-menu::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(to bottom, rgba(0, 102, 255, 0.5), rgba(0, 153, 255, 0.226));
+   z-index: 1;
+ }
+
+ .menu{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   z-index: 2;
+ }
+
+ /******* Buttons *******/
+
+ .btn-menu{
+   display: flex;
+   justify-content: center;
+ }
+
+ .btn {
+   padding: 1rem;
+   text-transform: uppercase;
+   margin: 0.5rem;
+   border: none;
+   border-radius: 5px;
+   background-color: rgb(187, 119, 255);
+   color: #FFF;
+ }
+
+ .btn:hover{
+   background-color: rgb(153, 50, 255);
+ }
+
+ /******* Input ********/
+input{
+   margin: 1rem auto;
+   width: 50%; 
+   border: none;
+   border-radius: 50px;
+   height: 2rem;
+   padding-left: 10px;
+}
+
+/******* Countries ******/
+
+.countries-container{
+   margin: 5rem 15rem;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+
+.country{
+   background-image: url("../images/map_image.jpg");
+   background-size: cover;
+   background-position: -50px 0;
+}
+
+.country::before{
+   background-color: rgba(57, 80, 97, 0.7);
+   position: absolute;
+   content: "";
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.125);
+   border-radius: 5px;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+  z-index: 1;
+}

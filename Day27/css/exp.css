@@ -1,0 +1,123 @@
+.exp .subtitle{
+ color:rgba(42, 110, 255);
+}
+
+.exp-text{
+  color: var(--text-color);
+}
+
+.exp-text strong{
+  color: var(--detail-color);
+}
+
+.empresa{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1.25rem;
+  background-color: var(--backdivcolor);
+  margin-bottom: 1.25rem;
+  border-radius: 0.25rem;
+  position: relative;
+  gap: 0.5rem 1.5rem;
+}
+
+.empresa::before{
+  content: ' ';
+  position: absolute; 
+  width: 3rem ;
+  height: 1rem;
+  top: 20px;
+  left: -10px;
+  background: linear-gradient(var(--detail-color), #2a6eff68);
+  z-index: -1;
+}
+
+.empresa-year{
+  position: absolute;
+  top: 20px;
+  left: -60px;
+}
+
+.empresa-title{
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.empresa-text{
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-color)
+}
+
+.empresa-skill{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-content: start;
+}
+
+.empresa-skill li{
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  border: 1px solid #2a6eff68;
+  background: #fff;
+  padding: 0.25rem 0.5rem;
+}
+
+@media (max-width: 800px){
+  .exp{
+    grid-template-columns: 1fr;
+  }
+
+  .exp{
+    gap: 1rem;
+  }
+  
+  .exp .subtitle{
+    word-wrap: break-word;
+    font-size: 6rem;
+    max-width: 100%;
+    justify-self: center;
+    color: #2a6effd8;
+  }
+
+  .exp-text{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .empresa-year{
+    position:initial;
+    order: 1;
+    top: -15px;
+    left: 30px;
+  }
+
+  .empresa-year::before{
+    content:"Ano: "
+  }
+
+  .empresa::before{
+    top: -10px;
+    left: 5px;
+    width: 1rem;
+    height: 1.5rem;
+    z-index: -1;
+    border-radius: 4px;
+  }
+  
+  .empresa-skill li{
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 500px){
+  .empresa{
+    grid-template-columns: 1fr;
+  }
+
+  .empresa-skill, .empresa-text, .empresa-title, .empresa-year, .empresa-year::before{
+    justify-self: center;
+  }}

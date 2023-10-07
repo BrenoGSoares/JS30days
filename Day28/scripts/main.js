@@ -16,7 +16,14 @@ const meses = [
 const playerTable = document.querySelector('.flex-leader')
 const playerData = document.querySelectorAll('.text-input')
 
+function rem() {
+  const newValue = parseInt(playerData[3].value) - 0
+  console.log(`Novo valor após subtrair 5: ${newValue}`)
+}
+
 function add() {
+  const players = document.querySelectorAll('.players')
+  console.log(players)
   const newValue = parseInt(playerData[3].value) + 5
   // Faça algo com o novo valor, por exemplo, atualize um elemento na página
   console.log(`Novo valor após adicionar 5: ${newValue}`)
@@ -24,11 +31,6 @@ function add() {
 
 function sub() {
   const newValue = parseInt(playerData[3].value) - 5
-  console.log(`Novo valor após subtrair 5: ${newValue}`)
-}
-
-function rem() {
-  const newValue = parseInt(playerData[3].value) - 0
   console.log(`Novo valor após subtrair 5: ${newValue}`)
 }
 

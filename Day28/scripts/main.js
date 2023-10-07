@@ -23,7 +23,7 @@ function rem() {
 
 function add() {
   const players = document.querySelectorAll('.players')
-  console.log(players)
+
   const newValue = parseInt(playerData[3].value) + 5
   // Faça algo com o novo valor, por exemplo, atualize um elemento na página
   console.log(`Novo valor após adicionar 5: ${newValue}`)

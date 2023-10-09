@@ -13,55 +13,49 @@ const meses = [
   'DEC',
 ]
 
+const buttonTexts = ['xx', '+5', '-5']
+let idBtn = 0
+
 const playerTable = document.querySelector('.flex-leader')
 const playerData = document.querySelectorAll('.text-input')
 
-function rem() {
-  const newValue = parseInt(playerData[3].value) - 0
-  console.log(`Novo valor após subtrair 5: ${newValue}`)
+function createButton(idBtn, i) {
+  const btnFunc = document.createElement('button')
+  btnFunc.textContent = buttonTexts[i]
+  btnFunc.className = 'btnFunc'
+  const btnId = `${idBtn}${i}`
+  btnFunc.setAttribute('data-id', btnId)
+  btnFunc.addEventListener('click', () => getValue(btnId))
+  return btnFunc
 }
 
-function add() {
-  const players = document.querySelectorAll('.players')
-
-  const newValue = parseInt(playerData[3].value) + 5
-  // Faça algo com o novo valor, por exemplo, atualize um elemento na página
-  console.log(`Novo valor após adicionar 5: ${newValue}`)
+function formatTime() {
+  const now = new Date()
+  const minutes = now.getMinutes().toString().padStart(2, '0')
+  const hours = now.getHours().toString().padStart(2, '0')
+  return `${
+    meses[now.getMonth()]
+  } ${now.getDate()}, ${now.getFullYear()}, ${hours}:${minutes}`
 }
 
-function sub() {
-  const newValue = parseInt(playerData[3].value) - 5
-  console.log(`Novo valor após subtrair 5: ${newValue}`)
-}
-
-const addPlayer = () => {
+function createPlayerBlock(idBtn) {
   const block = document.createElement('div')
-  const lineBreak = document.createElement('br')
   block.className = 'player'
+  block.id = `b${idBtn}`
+
   for (let i = 0; i < playerData.length; i++) {
     const data = document.createElement('h2')
     data.className = 'data'
 
     if (i === 0) {
-      const now = new Date()
       const timeSpan = document.createElement('span')
-
-      timeSpan.textContent = `${
-        meses[now.getMonth()]
-      } ${now.getDay()}, ${now.getFullYear()}, ${now.getHours()}:${now.getMinutes()}`
-
-      data.appendChild(
-        document.createTextNode(
-          playerData[i].value + ' ' + playerData[i + 1].value
-        )
-      )
       timeSpan.id = 'time'
-      data.appendChild(document.createTextNode(' '))
-      data.appendChild(lineBreak)
-      data.appendChild(timeSpan) // Anexe o tempo como um <span>
+      timeSpan.textContent = formatTime()
 
-      data.id = 'firstValue'
-      i += 1
+      data.textContent = `${playerData[i].value} ${playerData[i + 1].value} `
+      data.appendChild(document.createElement('br'))
+      data.appendChild(timeSpan)
+      i++
     } else if (i === 3) {
       data.textContent = parseInt(playerData[i].value)
     } else {
@@ -71,17 +65,32 @@ const addPlayer = () => {
     block.appendChild(data)
   }
 
-  const buttonTexts = ['xx', '+5', '-5']
-  const buttonFuncs = [rem, add, sub]
-  const blockBtn = document.createElement('div')
-
   for (let i = 0; i < buttonTexts.length; i++) {
-    const btnFunc = document.createElement('button')
-    btnFunc.textContent = buttonTexts[i]
-    btnFunc.className = 'btnFunc'
-    btnFunc.onclick = buttonFuncs[i]
-    blockBtn.appendChild(btnFunc)
-    block.appendChild(blockBtn)
+    block.appendChild(createButton(idBtn, i))
   }
-  playerTable.appendChild(block)
+
+  return block
+}
+
+function getValue(btnId) {
+  const players = document.querySelectorAll('.player')
+  const lastChar = btnId.charAt(btnId.length - 1)
+
+  if (lastChar === '0') {
+    const playerId = `b${btnId.slice(0, -1)}`
+    const playerToRemove = document.querySelector(`#${playerId}`)
+    playerToRemove.remove()
+    idBtn--
+  } else if (lastChar === '1') {
+    console.log('Button 2 clicked')
+    console.log(`Button ID: ${btnId}`)
+  } else {
+    console.log(`Button ID: ${btnId}`)
+  }
+}
+
+function addPlayer() {
+  const newPlayerBlock = createPlayerBlock(idBtn)
+  playerTable.appendChild(newPlayerBlock)
+  idBtn++
 }

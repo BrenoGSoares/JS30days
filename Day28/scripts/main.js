@@ -29,13 +29,31 @@ function createButton(idBtn, i) {
   return btnFunc
 }
 
+function getScoreFromId(id) {
+  const scoreElement = document.querySelector(`#${id} .data:nth-child(3)`)
+  return parseInt(scoreElement.textContent)
+}
+
+function compareScores(a, b) {
+  const scoreA = getScoreFromId(a.id)
+  const scoreB = getScoreFromId(b.id)
+  return scoreB - scoreA
+}
+
+function orderplayer() {
+  const players = document.querySelectorAll('.player')
+  const sortedPlayerDivs = Array.from(players).sort(compareScores)
+  players.forEach((div) => div.remove())
+  sortedPlayerDivs.forEach((div) => playerTable.appendChild(div))
+}
+
 function formatTime() {
   const now = new Date()
   const minutes = now.getMinutes().toString().padStart(2, '0')
   const hours = now.getHours().toString().padStart(2, '0')
   return `${
     meses[now.getMonth()]
-  } ${now.getDate()}, ${now.getFullYear()}, ${hours}:${minutes}`
+  } ${now.getDate()}, ${now.getFullYear()} ${hours}:${minutes}`
 }
 
 function createPlayerBlock(idBtn) {
@@ -73,24 +91,27 @@ function createPlayerBlock(idBtn) {
 }
 
 function getValue(btnId) {
-  const players = document.querySelectorAll('.player')
   const lastChar = btnId.charAt(btnId.length - 1)
-
+  const playerId = `b${btnId.slice(0, -1)}`
+  const player = document.querySelector(`#${playerId}`)
+  const scorePlayerSelect = document.querySelectorAll(`#${playerId} .data`)
   if (lastChar === '0') {
-    const playerId = `b${btnId.slice(0, -1)}`
-    const playerToRemove = document.querySelector(`#${playerId}`)
-    playerToRemove.remove()
+    player.remove()
     idBtn--
   } else if (lastChar === '1') {
-    console.log('Button 2 clicked')
-    console.log(`Button ID: ${btnId}`)
+    scorePlayerSelect[2].textContent =
+      parseInt(scorePlayerSelect[2].textContent) + 5
   } else {
-    console.log(`Button ID: ${btnId}`)
+    const scorePlayerSelect = document.querySelectorAll(`#${playerId} .data`)
+    scorePlayerSelect[2].textContent =
+      parseInt(scorePlayerSelect[2].textContent) - 5
   }
+  orderplayer()
 }
 
 function addPlayer() {
   const newPlayerBlock = createPlayerBlock(idBtn)
   playerTable.appendChild(newPlayerBlock)
+  orderplayer()
   idBtn++
 }

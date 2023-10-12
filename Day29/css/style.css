@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+ }
+
+ body, html{
+    height: calc(100% - 3rem);
+ }
+ .container{
+    height: 100%;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background-color: rgb(0, 153, 255);
+ }
+
+ #slogan {
+    font-family: Montserrat;
+    font-size: 150px;
+    text-transform: uppercase;
+ }
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  

@@ -1,0 +1,96 @@
+ * {
+    margin: 0;
+    padding: 0;
+ }
+
+h1, h2{
+   font-family: Montserrat;
+   text-align: center;
+}
+
+h2{
+   color: #000;
+   font-size: 1.5rem;
+   font-weight: 200;
+}
+
+h3{
+   font-family: montserrat;
+   font-size: 1rem;
+   font-weight: 100;
+   margin: 0 1rem;
+   text-align: left;
+}
+
+#title{
+   color: #ff9650;
+   font-size: 3rem;
+}
+
+
+
+/****** MENU ******/
+
+ .flex-menu{
+   display: flex;
+   flex-direction: column;
+   background-position: center;
+ }
+
+
+ .menu{
+   padding: 1rem 0;
+   background-color: #f2f2f2;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
+
+ /******* Buttons *******/
+
+ .btn-menu{
+   display: flex;
+   justify-content: center;
+ }
+
+ .btn {
+   padding: 1rem 2.5rem;
+   text-transform: uppercase;
+   margin: 0.5rem;
+   border: none;
+   border-radius: 50px;
+   background-color: #ff9650;
+ }
+
+ .btn:hover{
+   background-color: #fd893c;
+ }
+
+ /******* Input ********/
+input{
+   margin: 1rem auto;
+   width: 50%; 
+   border: 1px solid rgba(128, 128, 128, 0.2);
+   border-radius: 50px;
+   height: 3rem;
+   padding-left: 10px;
+}
+
+/******* Countries ******/
+
+.countries-container{
+   background-color: #f2f2f2 ;
+   margin: 1rem 0;
+   padding: 1rem 15rem;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+
+.country{
+   background-color: #FFF;
+   background-size: cover;
+   background-position: -50px 0;
+}
+

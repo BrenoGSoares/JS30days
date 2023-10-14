@@ -52,7 +52,8 @@ function count(arr) {
     info2.textContent = `Langagues: ${country[2].join(', ')}`
     block.appendChild(info2)
 
-    info3.textContent = `Population: ${country[3].toLocaleString()}`
+    info3.textContent = `Population: ${country[3]}`
+    info3.id = 'pop'
     block.appendChild(info3)
   }
 }
@@ -127,7 +128,6 @@ btnCapital.addEventListener('click', () => {
   finalBtn(btnCapital)
   initBtn(btnName)
   initBtn(btnPop)
-  console.log(orderCountries)
   orderCapital(orderCountries)
   if (!btnAticve) {
     btnAticve = true
@@ -139,13 +139,24 @@ btnCapital.addEventListener('click', () => {
 })
 
 btnPop.addEventListener('click', () => {
+  orderCountries = []
+  const listContries = document.querySelectorAll('#pop')
+  listContries.forEach((country) => {
+    const text = country.textContent
+    const populationIndex = text.indexOf('Population: ')
+
+    if (populationIndex !== -1) {
+      const population = text.slice(populationIndex + 'Population: '.length)
+      orderCountries.push(parseFloat(population))
+    }
+  })
   finalBtn(btnPop)
   initBtn(btnName)
   initBtn(btnCapital)
-  order(population)
+  orderPopulation(orderCountries)
   if (!btnAticve) {
     btnAticve = true
-    btnSelect = 0
+    btnSelect = 1
   } else {
     btnAticve = false
     initBtn(btnPop)
@@ -178,6 +189,29 @@ const orderCapital = (arr) => {
     arr.includes(objeto.capital)
   )
   objetosFiltrados.sort((a, b) => a.capital.localeCompare(b.capital))
+
+  block.forEach((block) => {
+    block.remove()
+  })
+
+  if (signal === 0) {
+    const reversedCountries = objetosFiltrados.slice().reverse()
+    count(reversedCountries)
+    signal = 1
+  } else {
+    count(objetosFiltrados)
+    signal = 0
+  }
+}
+
+const orderPopulation = (arr) => {
+  const block = document.querySelectorAll('.country')
+
+  const objetosFiltrados = countries.filter((objeto) =>
+    arr.includes(objeto.population)
+  )
+  console.log(objetosFiltrados)
+  objetosFiltrados.sort((a, b) => a.population - b.population)
 
   block.forEach((block) => {
     block.remove()
